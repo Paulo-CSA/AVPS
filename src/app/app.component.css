@@ -14,31 +14,32 @@ header {
 
 .contaner {
     max-width: 1200px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .barraInicial {
     height: 250px;
     display: grid;
-    grid-template-areas: "item-1 item-2";  
-        
-}
-.item-1{
-grid-area: item-1;
-display: flex;
-margin-top: 20px;
-align-content: center;
-justify-content: center;
-justify-items: center;
+    grid-template-areas: "item-1 item-2";
 
 }
 
-.item-2{
+.item-1 {
+    grid-area: item-1;
+    display: flex;
+    margin-top: 20px;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.item-2 {
     grid-area: item-2;
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
     justify-content: center;
-   
+
 }
 
 .super {
@@ -67,14 +68,13 @@ justify-items: center;
 }
 
 .p1 {
-    font-family:cursive
-     ;
+    font-family: cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 43px;
     color: #E6C76D;
-    text-align:left ;
+    text-align: left;
 }
 
 .p2 {
@@ -89,4 +89,32 @@ justify-items: center;
     height: 250px;
     display: grid;
     grid-template-areas: "item-1 item-2";
+}
+
+.mostrarMenu {
+    left: 0 !important;
+}
+
+@media all and (min-width:992px) {
+    .menu-hamb {
+        display: none;
+    }
+}
+
+
+@media all and (max-width:550px) {
+
+    .item-2 {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-hamb {
+        display: block;
+        height: 30px;
+        margin-left: 25px;
+    }
 }
