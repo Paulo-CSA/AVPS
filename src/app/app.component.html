@@ -1,4 +1,11 @@
-<header class="contaner">
+<script>
+  function abrirMenu() {
+    alert("aqui");
+    let navBar = document.querySelector(".menu");
+    navBar.classList.toggle("mostrarMenu");
+  }</script>
+  
+  <header class="contaner">
   <div class="barraInicial">
     <div class="grid-item item-1"><a routerLink="/home"><img class="super" src="/assets/img/super.jpeg"
           alt="imgSuper"></a></div>
@@ -7,14 +14,19 @@
       <p class="p2">Faz o 1 e vem com o SuperMan.</p>
     </div>
   </div>
-
-  <div class="menu">
-    <a class="a1" routerLink="/produtos">Produtos</a>
-    <a class="a1" routerLink="/info">Informações</a>
-    <a class="a1" href="https://www.clubeapvs.com.br
-    " target="_blank" rel="noopener noreferrer">Clube APVS</a>
-    <a class="a1" href="https://associado.apvs.org.br/login" target="_blank" rel="noopener noreferrer">Área do Associado</a>
-  </div>
 </header>
+
+<div class="contaner">
+  <img class="menu-hamb" (click)="abrirMenu()" src="/assets/img/bars.svg" alt="menu-hamb">
+  <nav id="menu" class="menu">
+    <div class="bot menu-hamb"><img class="botFechar" (click)="fecharMenu()" src="/assets/img/fechar.svg" alt="fechar"></div>
+    <a class="a1" (click)="fecharMenu()"routerLink="/produtos">Produtos</a>
+    <a class="a1" (click)="fecharMenu()" routerLink="/info">Informações</a>
+    <a class="a1" (click)="fecharMenu()" href="https://www.clubeapvs.com.br
+    " target="_blank" (click)="fecharMenu()" rel="noopener noreferrer">Clube APVS</a>
+    <a class="a1" (click)="fecharMenu()" href="https://associado.apvs.org.br/login" target="_blank" rel="noopener noreferrer">Área do
+      Associado</a>
+  </nav>  
+</div>
 
 <router-outlet></router-outlet>
