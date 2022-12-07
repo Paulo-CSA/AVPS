@@ -28,8 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/script.js",
-              "/assets/js/script.js"
+                            
             ]
           },
           "configurations": {
